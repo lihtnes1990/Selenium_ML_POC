@@ -1,0 +1,16 @@
+@relation test_prioritization
+
+@attribute executionTime numeric
+@attribute numberOfSteps numeric
+@attribute isCritical {yes, no}
+@attribute testCaseType {functional, performance, security}
+@attribute lastExecutionResult {pass, fail, skip}
+@attribute module {login, checkout, profile, search}
+@attribute priority {low, high}
+
+@data
+10.0, 5, yes, functional, pass, login, high
+5.0, 2, no, performance, fail, checkout, low
+8.0, 4, yes, security, pass, profile, high
+7.0, 3, no, functional, skip, search, low
+12.0, 6, yes, performance, fail, checkout, high
